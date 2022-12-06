@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./index";
 
 const BUTTON_CONFIGURATION = {
   title: "Components/Button",

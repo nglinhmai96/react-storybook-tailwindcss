@@ -1,5 +1,5 @@
 import React from "react";
-import InputTextField from "./InputTextField";
+import InputTextField from "./index";
 
 const INPUT_CONFIGURATION = {
   title: "Components/Input",
