@@ -1,17 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { DEFAULT_VARIANTS } from "./constants";
 
-/* Variant: Outline, Filled, Standard */
+/* Variant: Outlined, Filled, Standard */
 const VARIANT_STYLE = {
-  outline: "bg-white border-2 border-slate-300",
+  outlined: "bg-white border-2 border-slate-300",
   filled: "bg-gray-100",
   standard: "border-b-2 border-slate-300",
 };
 
 const INPUT_STYLE =
-  "placeholder:italic placeholder:text-slate-400 block rounded-md py-2 px-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm";
+  "placeholder:bold placeholder:text-slate-400 block rounded-md py-2 px-3 shadow-sm focus:outline-none focus:border-blue-500 focus:ring-blue-500 focus:ring-1 sm:text-sm";
 
-const InputTextField = ({ label, variant, fullWidth, ...props }) => {
+const InputTextField = ({ label, variant, fullWidth, disabled, ...props }) => {
   const widthStyle = fullWidth ? "w-full" : "";
 
   return (
@@ -25,9 +26,10 @@ const InputTextField = ({ label, variant, fullWidth, ...props }) => {
 
 InputTextField.propTypes = {
   label: PropTypes.string,
-  variant: PropTypes.oneOf(["outline", "filled", "standard"]),
+  variant: PropTypes.oneOf(DEFAULT_VARIANTS),
   fullWidth: PropTypes.bool,
   onChange: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
 InputTextField.defaultProps = {
@@ -35,6 +37,7 @@ InputTextField.defaultProps = {
   variant: "outline",
   fullWidth: false,
   onChange: undefined,
+  disabled: false,
 };
 
 export default InputTextField;

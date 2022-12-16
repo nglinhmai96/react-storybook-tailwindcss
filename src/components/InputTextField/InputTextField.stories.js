@@ -1,12 +1,16 @@
 import React from "react";
+import { DEFAULT_VARIANTS } from "./constants";
 import InputTextField from "./index";
 
 const INPUT_CONFIGURATION = {
   title: "Components/Input",
   component: InputTextField,
+  argTypes: {
+    variant: { control: { type: "select", options: DEFAULT_VARIANTS } },
+  },
   args: {
     label: "Input",
-    variant: "outline",
+    variant: "outlined",
     fullWidth: false,
   },
 };
@@ -21,9 +25,9 @@ FullWidth.args = {
 };
 
 /* Variant */
-const Outline = Template.bind({});
-Outline.args = {
-  variant: "outline",
+const Outlined = Template.bind({});
+Outlined.args = {
+  variant: "outlined",
 };
 
 const Filled = Template.bind({});
@@ -36,5 +40,5 @@ Standard.args = {
   variant: "standard",
 };
 
-export { Outline, Filled, Standard, FullWidth };
+export { Outlined, Filled, Standard, FullWidth };
 export default INPUT_CONFIGURATION;

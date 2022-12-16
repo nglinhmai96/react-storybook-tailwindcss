@@ -1,18 +1,31 @@
 import React from "react";
+import { Account } from "../../assets/svg";
+import { DEFAULT_SIZES, DEFAULT_TYPES, DEFAULT_VARIANTS } from "./constants";
 import Button from "./index";
 
 const BUTTON_CONFIGURATION = {
   title: "Components/Button",
   component: Button,
   argTypes: {
-    backgroundColor: { control: "color" },
+    type: {
+      control: {
+        type: "select",
+        options: DEFAULT_TYPES,
+      },
+    },
+    size: { control: { type: "select", options: DEFAULT_SIZES } },
+    variant: {
+      control: { type: "select", options: DEFAULT_VARIANTS },
+    },
   },
   args: {
+    fullWidth: false,
     label: "Button",
     type: "primary",
     size: "medium",
-    variant: "outlined",
+    variant: "contained",
     disabled: false,
+    loading: false,
   },
 };
 
@@ -20,31 +33,23 @@ const BUTTON_CONFIGURATION = {
 const Template = (args) => <Button {...args} />;
 
 /* Type */
-const Primary = Template.bind({});
-Primary.args = {
+/* Default Button */
+const Default = Template.bind({});
+Default.args = {
   type: "primary",
 };
-
-const Secondary = Template.bind({});
-Secondary.args = {
-  type: "secondary",
+/* Icon Button */
+const LeftIconButton = Template.bind({});
+LeftIconButton.args = {
+  type: "primary",
+  startIcon: <Account className="w-5 h-5" />,
 };
 
-/* Size */
-const Small = Template.bind({});
-Small.args = {
-  size: "small",
+const RightIconButton = Template.bind({});
+RightIconButton.args = {
+  type: "primary",
+  endIcon: <Account className="w-5 h-5" />,
 };
 
-const Medium = Template.bind({});
-Medium.args = {
-  size: "medium",
-};
-
-const Large = Template.bind({});
-Large.args = {
-  size: "large",
-};
-
-export { Primary, Secondary, Small, Medium, Large };
+export { Default, LeftIconButton, RightIconButton };
 export default BUTTON_CONFIGURATION;
