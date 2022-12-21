@@ -4,15 +4,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "var(--color-primary)",
-        primaryBold: "#883F76",
-        regenGray: "#8F9BA9",
-        kashmirBlue: "#475993",
-        mercury: "#E9E9E9",
-      },
-
-      borderRadius: {
-        20: "20px",
+        primary: {
+          500: "#5c6ac4",
+        },
+        secondary: "#ecc94b",
       },
     },
   },
