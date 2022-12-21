@@ -9,10 +9,6 @@ module.exports = {
         },
         secondary: "#ecc94b",
       },
-
-      borderRadius: {
-        20: "20px",
-      },
     },
   },
   plugins: [],

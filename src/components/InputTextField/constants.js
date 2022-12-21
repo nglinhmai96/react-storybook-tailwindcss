@@ -1,1 +1,1 @@
-export const DEFAULT_VARIANTS = ["filled", "outlined", "standard"];
+export const DEFAULT_VARIANTS = ["filled", "outlined", "default"];

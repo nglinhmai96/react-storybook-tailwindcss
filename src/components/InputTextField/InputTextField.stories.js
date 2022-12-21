@@ -12,6 +12,7 @@ const INPUT_CONFIGURATION = {
     label: "Input",
     variant: "outlined",
     fullWidth: false,
+    disabled: false,
   },
 };
 
@@ -35,10 +36,10 @@ Filled.args = {
   variant: "filled",
 };
 
-const Standard = Template.bind({});
-Standard.args = {
-  variant: "standard",
+const Default = Template.bind({});
+Default.args = {
+  variant: "default",
 };
 
-export { Outlined, Filled, Standard, FullWidth };
+export { Outlined, Filled, Default, FullWidth };
 export default INPUT_CONFIGURATION;

@@ -1,6 +1,6 @@
 import React from "react";
 import Button from "./components/Button";
-import LineChart from "./components/Chart/LineChart";
+import LineChart from "./components/Chart/index";
 
 const App = () => {
   return (
